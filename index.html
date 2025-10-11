@@ -69,11 +69,12 @@
     <header class="fixed bottom-0 left-0 right-0 z-50 p-4 transition-all duration-300 md:top-0 md:bottom-auto">
         <nav class="container mx-auto flex justify-center items-center text-white">
             <div class="bg-black bg-opacity-30 backdrop-blur-sm rounded-full px-6 py-2">
-                <ul class="flex items-center space-x-6 text-sm">
+                <ul class="flex items-center space-x-4 md:space-x-6 text-sm">
                     <li><a href="#mission" class="hover:text-[var(--color-gold)] transition-colors">Mission</a></li>
                     <li><a href="#services" class="hover:text-[var(--color-gold)] transition-colors">Services</a></li>
                     <li><a href="#profile" class="hover:text-[var(--color-gold)] transition-colors">Profile</a></li>
                     <li><a href="#works" class="hover:text-[var(--color-gold)] transition-colors">Works</a></li>
+                    <li><a href="#news" class="hover:text-[var(--color-gold)] transition-colors">News</a></li>
                     <li><a href="#contact" class="hover:text-[var(--color-gold)] transition-colors">Contact</a></li>
                 </ul>
             </div>
@@ -225,9 +226,49 @@
             </div>
         </section>
 
+        <!-- ⑥ ニュース・ブログセクション -->
+        <section id="news" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="text-sm font-bold tracking-widest text-[var(--color-gold)] mb-4">NEWS & BLOG</h2>
+                    <p class="text-3xl md:text-4xl font-bold text-[var(--color-navy)]">最新情報</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto scroll-reveal">
+                    <!-- Note Card 1 -->
+                    <a href="https://note.com/curvedrigrow18/n/n36511e194fd1" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="font-bold text-gray-800 leading-tight">自己紹介｜イサヤマとは何者なのか</p>
+                        </div>
+                        <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
+                    </a>
+                    <!-- Note Card 2 -->
+                     <a href="https://note.com/curvedrigrow18/n/n2f40a868f1fe" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                         <div>
+                            <p class="font-bold text-gray-800 leading-tight text-sm">「いつか独立したい…」と思っている宅建士のあなたへ。年間50万PVの不動産サイトで仲介事業を展開するため、新会社の代表として立ち上げを担う方を募集します。</p>
+                         </div>
+                        <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
+                    </a>
+                    <!-- Note Card 3 -->
+                     <a href="https://note.com/curvedrigrow18/n/n55f5466cab19" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                         <div>
+                            <p class="font-bold text-gray-800 leading-tight text-sm">【共著者募集】商業出版3冊・累計1万部突破。「IT、マーケ、AIに詳しい方」商業出版で本を出しませんか？</p>
+                         </div>
+                        <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
+                    </a>
+                    <!-- Note Card 4 -->
+                     <a href="https://note.com/curvedrigrow18/n/nc01ac0b1efb7" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                         <div>
+                            <p class="font-bold text-gray-800 leading-tight text-sm">【発信者募集】自分のキャリアを武器に、毎月30万円/月の副業を共に作りませんか？（ファイナンスキャリアの方歓迎）</p>
+                         </div>
+                        <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- ⑥ CONTACTセクション（最下部） -->
+    <!-- ⑦ CONTACTセクション（最下部） -->
     <footer id="contact" class="bg-[var(--color-navy)] text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h2>
