@@ -35,12 +35,11 @@
             height: 100%;
             z-index: 0;
         }
-        /* コンテンツがキャンバスより手前に来るように設定 */
         .hero-content {
             position: relative;
             z-index: 1;
         }
-        /* スクロールアニメーション用のクラス */
+        /* スクロールアニメーション */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -58,7 +57,7 @@
             overflow: hidden;
         }
         .service-card:hover .description {
-            max-height: 200px; /* 十分な高さを確保 */
+            max-height: 200px;
             opacity: 1;
         }
     </style>
@@ -72,6 +71,7 @@
                 <ul class="flex items-center space-x-4 md:space-x-6 text-sm">
                     <li><a href="#mission" class="hover:text-[var(--color-gold)] transition-colors">Mission</a></li>
                     <li><a href="#services" class="hover:text-[var(--color-gold)] transition-colors">Services</a></li>
+                    <li><a href="#media" class="hover:text-[var(--color-gold)] transition-colors">Media</a></li>
                     <li><a href="#profile" class="hover:text-[var(--color-gold)] transition-colors">Profile</a></li>
                     <li><a href="#works" class="hover:text-[var(--color-gold)] transition-colors">Works</a></li>
                     <li><a href="#news" class="hover:text-[var(--color-gold)] transition-colors">News</a></li>
@@ -129,7 +129,7 @@
                     <p class="text-3xl md:text-4xl font-bold text-[var(--color-navy)]">事業内容</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service Card 1 -->
+                    <!-- Service 1 -->
                     <div class="text-center p-8 scroll-reveal service-card transition-all duration-300 hover:bg-white hover:shadow-xl rounded-lg">
                         <div class="flex justify-center mb-4">
                             <svg class="w-12 h-12 text-[var(--color-gold)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 8.25v7.5A2.25 2.25 0 006.75 18z" /></svg>
@@ -139,17 +139,17 @@
                             <p class="mt-4">DifyなどノーコードAIツールを活用した業務効率化、法人向けAI研修、プロンプト設計支援を行います。</p>
                         </div>
                     </div>
-                    <!-- Service Card 2 -->
+                    <!-- Service 2 -->
                     <div class="text-center p-8 scroll-reveal service-card transition-all duration-300 hover:bg-white hover:shadow-xl rounded-lg">
                         <div class="flex justify-center mb-4">
                             <svg class="w-12 h-12 text-[var(--color-gold)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                         </div>
                         <h3 class="text-lg font-bold mb-2">出版・コンテンツ制作</h3>
                         <div class="description text-gray-600 text-sm">
-                            <p class="mt-4">生成AI・ビジネス書籍の企画・執筆・編集、出版社との共同企画（SBクリエイティブ様等）の実績があります。</p>
+                            <p class="mt-4">生成AI・ビジネス書籍の企画・執筆・編集、出版社との共同企画の実績があります。</p>
                         </div>
                     </div>
-                    <!-- Service Card 3 -->
+                    <!-- Service 3 -->
                     <div class="text-center p-8 scroll-reveal service-card transition-all duration-300 hover:bg-white hover:shadow-xl rounded-lg">
                         <div class="flex justify-center mb-4">
                              <svg class="w-12 h-12 text-[var(--color-gold)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
@@ -159,22 +159,45 @@
                            <p class="mt-4">財務モデリング、資金調達、M&Aサポート、中小企業の経営改善・再生支援を提供します。</p>
                         </div>
                     </div>
-                    <!-- Service Card 4 -->
+                    <!-- Service 4 -->
                     <div class="text-center p-8 scroll-reveal service-card transition-all duration-300 hover:bg-white hover:shadow-xl rounded-lg">
                         <div class="flex justify-center mb-4">
                            <svg class="w-12 h-12 text-[var(--color-gold)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962A3 3 0 013 10.5V18a3 3 0 01-2.121 2.872A9.09 9.09 0 017.5 18.72m-5.372.566A9.06 9.06 0 0112 15.75m-2.25-1.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" /></svg>
                         </div>
                         <h3 class="text-lg font-bold mb-2">教育・コミュニティ運営</h3>
                         <div class="description text-gray-600 text-sm">
-                            <p class="mt-4">事業再生ラウンジ、起業ゼロイチラボの運営や、ChatGPT・AI実践講座を提供しています。</p>
+                            <p class="mt-4">事業再生ラウンジの運営や、ChatGPT・AI実践講座を提供しています。</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 運営メディアセクション -->
+        <section id="media" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="text-sm font-bold tracking-widest text-[var(--color-gold)] mb-4">OWNED MEDIA</h2>
+                    <p class="text-3xl md:text-4xl font-bold text-[var(--color-navy)]">運営メディア</p>
+                </div>
+                <div class="max-w-2xl mx-auto scroll-reveal">
+                    <a href="https://www.instagram.com/business_ai_times/?hl=ja" target="_blank" rel="noopener noreferrer" class="group block bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center space-x-6">
+                            <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shrink-0">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.28.058-2.153.261-2.918.559-.79.306-1.46.717-2.128 1.385-.668.667-1.079 1.338-1.385 2.128-.298.765-.501 1.638-.559 2.918-.058 1.28-.072 1.688-.072 4.947s.014 3.668.072 4.947c.058 1.28.261 2.153.559 2.918.306.79.717 1.46 1.385 2.128.667.668 1.338 1.079 2.128 1.385.765.298 1.638.501 2.918.559 1.28.058 1.688.072 4.947.072s3.668-.014 4.947-.072c1.28-.058 2.153-.261 2.918-.559.79-.306 1.46-.717 2.128-1.385.668-.667 1.079-1.338 1.385-2.128.298-.765.501-1.638.559-2.918.058-1.28.072-1.688.072-4.947s-.014-3.668-.072-4.947c-.058-1.28-.261-2.153-.559-2.918-.306-.79-.717-1.46-1.385-2.128-.667-.668-1.338-1.079-2.128-1.385-.765-.298-1.638-.501-2.918-.559-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[var(--color-navy)] group-hover:text-[var(--color-gold)] transition-colors">business_ai_times</h3>
+                                <p class="text-gray-600 mt-2 leading-relaxed">最新テクノロジーや世界の動向について発信するメディアを運営</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- ④ 代表紹介セクション -->
-        <section id="profile" class="py-20 md:py-32 bg-white">
+        <section id="profile" class="py-20 md:py-32 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto scroll-reveal">
                     <div class="w-full md:w-1/3 flex-shrink-0">
@@ -184,38 +207,44 @@
                         <h2 class="text-sm font-bold tracking-widest text-[var(--color-gold)] mb-4">PROFILE</h2>
                         <h3 class="text-2xl md:text-3xl font-bold text-[var(--color-navy)] mb-2">代表メッセージ</h3>
                         <p class="text-lg font-bold text-gray-800 mb-6">代表取締役 諌山 圭司</p>
-                        <p class="text-gray-700 leading-relaxed">
-                            銀行・事業再生・M&Aを経て、起業し役員向け社宅代行事業や出版事業など複数事業を展開。<br>
-                            著書3冊（生成AI関連書籍）はAmazonカテゴリ1位を獲得。<br>
-                            企業研修や講演、コンサルティング活動を通じ、個人と組織の成長を支援しています。
-                        </p>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>銀行・事業再生・M&Aを経て、起業し役員向け社宅代行事業や出版事業など複数事業を展開。</p>
+                            <p>著書4冊（生成AI関連書籍）はAmazonカテゴリ1位を獲得。累計2万部の販売実績を誇る。SNSの総フォロワーは2万人超。</p>
+                            <p>企業研修や講演、コンサルティング活動を通じ、個人と組織の成長を支援しています。</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ⑤ 実績・メディア掲載セクション -->
-        <section id="works" class="py-20 md:py-24 bg-gray-50">
+        <!-- ⑤ 実績・著書セクション -->
+        <section id="works" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <div class="mb-16 scroll-reveal">
                     <h2 class="text-sm font-bold tracking-widest text-[var(--color-gold)] mb-4">WORKS & MEDIA</h2>
                     <p class="text-3xl md:text-4xl font-bold text-[var(--color-navy)]">実績・著書</p>
                 </div>
-                <!-- 書籍 -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-16 max-w-4xl mx-auto scroll-reveal">
-                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
-                         <img src="book1.jpg" alt="書籍1の表紙" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                <!-- 著書リスト -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16 max-w-5xl mx-auto scroll-reveal">
+                    <!-- 最新刊 -->
+                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
+                         <img src="AIで価値.jpg" alt="AIで価値を生み出す思考と技術" class="rounded-lg shadow-xl w-full h-auto object-cover border border-gray-100">
+                         <p class="mt-4 text-xs font-bold text-[var(--color-gold)] tracking-widest">NEW RELEASE</p>
                     </a>
-                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
-                         <img src="book2.jpg" alt="書籍2の表紙" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    <!-- 既刊 -->
+                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
+                         <img src="book1.jpg" alt="著書1" class="rounded-lg shadow-lg w-full h-auto object-cover">
                     </a>
-                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
-                         <img src="book3.jpg" alt="書籍3の表紙" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
+                         <img src="book2.jpg" alt="著書2" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </a>
+                    <a href="https://www.amazon.co.jp/stores/%E3%82%A4%E3%82%B5%E3%83%A4%E3%83%9E-%E3%82%BB%E3%82%A4%E3%82%BF/author/B0F67H9RPW" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:-translate-y-2">
+                         <img src="book3.jpg" alt="著書3" class="rounded-lg shadow-lg w-full h-auto object-cover">
                     </a>
                 </div>
-                 <!-- メディアロゴ -->
+                
                 <div class="mt-16 border-t border-gray-200 pt-10 scroll-reveal">
-                    <h3 class="text-gray-500 mb-8">MEDIA PARTNERS & PUBLICATIONS</h3>
+                    <h3 class="text-gray-500 mb-8 font-bold tracking-widest text-xs">MEDIA PARTNERS & PUBLICATIONS</h3>
                     <div class="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 text-gray-400">
                         <span class="text-xl font-semibold filter grayscale hover:grayscale-0 transition-all">SB Creative</span>
                         <span class="text-xl font-semibold filter grayscale hover:grayscale-0 transition-all">note</span>
@@ -227,30 +256,38 @@
         </section>
 
         <!-- ⑥ ニュース・ブログセクション -->
-        <section id="news" class="py-20 md:py-24 bg-white">
+        <section id="news" class="py-20 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 scroll-reveal">
                     <h2 class="text-sm font-bold tracking-widest text-[var(--color-gold)] mb-4">NEWS & BLOG</h2>
                     <p class="text-3xl md:text-4xl font-bold text-[var(--color-navy)]">最新情報</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto scroll-reveal">
+                    
+                    <!-- NEW POST -->
+                    <a href="https://note.com/curvedrigrow18/n/n3509b875a2b7" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full border-t-4 border-[var(--color-gold)]">
+                        <div>
+                           <p class="font-bold text-gray-800 leading-tight text-sm">【新規事業の代表募集】AI×M&Aの領域で、新たなマッチングプラットフォームを立ち上げます。これまでのキャリアを活かし、次世代のインフラを共に作りませんか？</p>
+                        </div>
+                       <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start font-bold underline">NEW POST &rarr;</span>
+                   </a>
 
                     <!-- Note Card 2 -->
-                     <a href="https://note.com/curvedrigrow18/n/n2f40a868f1fe" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                     <a href="https://note.com/curvedrigrow18/n/n2f40a868f1fe" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
                          <div>
                             <p class="font-bold text-gray-800 leading-tight text-sm">「いつか独立したい…」と思っている宅建士のあなたへ。年間50万PVの不動産サイトで仲介事業を展開するため、新会社の代表として立ち上げを担う方を募集します。</p>
                          </div>
                         <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
                     </a>
                     <!-- Note Card 3 -->
-                     <a href="https://note.com/curvedrigrow18/n/n55f5466cab19" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                     <a href="https://note.com/curvedrigrow18/n/n55f5466cab19" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
                          <div>
                             <p class="font-bold text-gray-800 leading-tight text-sm">【共著者募集】商業出版3冊・累計1万部突破。「IT、マーケ、AIに詳しい方」商業出版で本を出しませんか？</p>
                          </div>
                         <span class="text-xs text-[var(--color-gold)] mt-4 inline-block self-start">Read More &rarr;</span>
                     </a>
                     <!-- Note Card 4 -->
-                     <a href="https://note.com/curvedrigrow18/n/nc01ac0b1efb7" target="_blank" rel="noopener noreferrer" class="block bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
+                     <a href="https://note.com/curvedrigrow18/n/nc01ac0b1efb7" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between h-full">
                          <div>
                             <p class="font-bold text-gray-800 leading-tight text-sm">【発信者募集】自分のキャリアを武器に、毎月30万円/月の副業を共に作りませんか？（ファイナンスキャリアの方歓迎）</p>
                          </div>
@@ -262,7 +299,7 @@
 
     </main>
 
-    <!-- ⑦ CONTACTセクション（最下部） -->
+    <!-- ⑦ CONTACTセクション -->
     <footer id="contact" class="bg-[var(--color-navy)] text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h2>
@@ -327,7 +364,6 @@
                         this.y += Math.sin(this.angle) * this.speed;
 
                         if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-                           // 画面外に出たら位置をリセット
                            this.x = Math.random() * canvas.width;
                            this.y = Math.random() * canvas.height;
                         }
@@ -366,7 +402,7 @@
                 });
             }
 
-            // --- スクロール रिवीलアニメーション ---
+            // --- スクロールアニメーション ---
             const revealElements = document.querySelectorAll('.scroll-reveal');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -386,16 +422,16 @@
              // --- スムーズスクロール ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         });
     </script>
 </body>
 </html>
-
-
-
