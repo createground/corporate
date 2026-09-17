@@ -20,7 +20,9 @@
 
   var footer =
     '<footer class="ft"><div class="wrap"><div class="top">' +
-    '<div><a class="logo" href="' + root + 'index.html"><i></i><b>CREATE GROUND</b></a><p>合同会社クリエイトグラウンド<br>〒153-0064 東京都目黒区下目黒1-1-14 コノトラビル7F</p></div>' +
+    '<div><a class="logo" href="' + root + 'index.html"><i></i><b>CREATE GROUND</b></a>' +
+    '<p>合同会社クリエイトグラウンド<br>〒153-0064 東京都目黒区下目黒1-1-14 コノトラビル7F</p>' +
+    '<p class="tel">TEL <a href="tel:0345639965">03-4563-9965</a>　FAX 03-6630-2527</p></div>' +
     '<div><h5>BUSINESS</h5><ul>' +
     '<li><a href="' + root + 'business/consulting.html">経営改善・事業再生</a></li>' +
     '<li><a href="' + root + 'business/ai.html">AI・研修・出版</a></li>' +
