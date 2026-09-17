@@ -343,3 +343,12 @@ form button.btn{border:0;cursor:pointer;font:inherit;font-weight:700;justify-sel
 .ft .tel{margin-top:10px;font-family:"Inter";letter-spacing:.02em}
 .ft .tel a:hover{color:#fff}
 @media (max-width:960px){.ccards{grid-template-columns:1fr;gap:16px}.ccard{padding:30px 24px}}
+
+/* book post */
+.bookpost{display:grid;grid-template-columns:230px 1fr;gap:40px;align-items:start;margin-bottom:40px}
+.bookpost img{width:100%;margin:0;aspect-ratio:auto;box-shadow:0 14px 34px rgba(0,0,0,.16)}
+.bookpost h2{border:0;padding:0;font-size:20px;margin-bottom:14px}
+.spec{font-size:13.5px;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+.spec dt{float:left;clear:left;width:76px;color:var(--ink-2)}
+.spec dd{margin-left:76px;margin-bottom:6px}
+@media (max-width:960px){.bookpost{grid-template-columns:1fr;gap:24px}.bookpost img{max-width:200px}}
