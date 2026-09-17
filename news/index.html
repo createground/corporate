@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>お知らせ｜CREATE GROUND</title>
+<meta name="description" content="合同会社クリエイトグラウンドからのお知らせ・お役立ち情報の一覧です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=6">
+</head>
+<body data-root="../">
+
+<div class="hero sub">
+  <div class="bg" style="background-image:url(https://images.unsplash.com/photo-1706839638674-b15b4f0576e9?auto=format&fit=crop&w=2000&q=75)"></div>
+  <div class="wrap">
+    <div class="label">NEWS</div>
+    <h1>お知らせ</h1>
+    <p>会社からのご案内と、住まい・経営に関する情報をお届けします。</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap" style="max-width:940px">
+
+    <div class="tabs rv">
+      <button class="on" data-cat="all">すべて</button>
+      <button data-cat="company">会社情報</button>
+      <button data-cat="housing">住宅支援事業</button>
+      <button data-cat="media">メディア・出版</button>
+    </div>
+
+    <ul class="nlist rv">
+
+      <li data-cat="housing">
+        <a href="article.html">
+          <div class="meta"><time datetime="2026-10-01">2026.10.01</time><span class="chip housing">住宅支援事業</span></div>
+          <h2>住宅支援事業のご案内ページを公開しました</h2>
+          <p>借上社宅の運用代行、転貸型社宅サービス、法人契約のサポートについてご案内するページを公開しました。</p>
+        </a>
+      </li>
+
+      <li data-cat="company">
+        <a href="article.html">
+          <div class="meta"><time datetime="2026-09-18">2026.09.18</time><span class="chip company">会社情報</span></div>
+          <h2>コーポレートサイトをリニューアルしました</h2>
+          <p>事業内容の紹介と会社情報をわかりやすくお伝えするため、サイト全体を新しくしました。</p>
+        </a>
+      </li>
+
+      <li data-cat="company">
+        <a href="article.html">
+          <div class="meta"><time datetime="2024-09-01">2024.09.01</time><span class="chip company">会社情報</span></div>
+          <h2>合同会社クリエイトグラウンドを設立しました</h2>
+          <p>経営改善・事業再生支援を中心に、合同会社クリエイトグラウンドを設立いたしました。</p>
+        </a>
+      </li>
+
+    </ul>
+
+    <p class="empty" style="display:none">該当するお知らせはありません。</p>
+
+  </div>
+</section>
+
+<div class="cta">
+  <img src="https://images.unsplash.com/photo-1728877648326-1e571d43c32b?auto=format&fit=crop&w=2000&q=70" alt="">
+  <div class="wrap rv">
+    <div class="en" style="color:#fff">Contact</div>
+    <h2 class="h2">お問い合わせ</h2>
+    <p>事業のご相談、取材・講演のご依頼はこちらから。</p>
+    <a class="btn" href="../contact.html">お問い合わせフォーム →</a>
+  </div>
+</div>
+
+<script src="../assets/common.js?v=6"></script>
+<script>
+  // カテゴリの絞り込み
+  var btns = document.querySelectorAll('.tabs button');
+  var items = document.querySelectorAll('.nlist li');
+  var empty = document.querySelector('.empty');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      var cat = b.getAttribute('data-cat');
+      var shown = 0;
+      items.forEach(function (li) {
+        var hit = (cat === 'all' || li.getAttribute('data-cat') === cat);
+        li.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+    });
+  });
+</script>
+</body>
+</html>

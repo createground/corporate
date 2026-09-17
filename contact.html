@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>お問い合わせ｜CREATE GROUND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=6">
+<style>
+  form{display:grid;gap:30px}
+  label{font-size:14px;font-weight:700;display:grid;gap:10px}
+  label small{color:var(--accent);font-weight:500;margin-left:6px}
+  input,select,textarea{font:inherit;font-weight:400;padding:16px 18px;border:1px solid #d6d5d0;background:#fff;color:var(--ink);border-radius:0;outline:none}
+  input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+  textarea{min-height:200px}
+  button.btn{border:0;cursor:pointer;justify-self:center;font:inherit;font-weight:700}
+</style>
+</head>
+<body data-root="./">
+
+<div class="hero sub">
+  <div class="bg" style="background-image:url(https://images.unsplash.com/photo-1728877648326-1e571d43c32b?auto=format&fit=crop&w=2000&q=75)"></div>
+  <div class="wrap">
+    <div class="label">CONTACT</div>
+    <h1>お問い合わせ</h1>
+    <p>2営業日以内にご連絡いたします。</p>
+  </div>
+</div>
+
+<section class="gray">
+  <div class="wrap" style="max-width:760px">
+    <form onsubmit="alert('試作版のため送信されません');return false;">
+      <label>お問い合わせ種別
+        <select id="type">
+          <option value="housing">住宅支援事業について</option>
+          <option value="resident">住まいのご相談（入居希望）</option>
+          <option value="owner">物件のご提供・お取引</option>
+          <option value="consulting">経営改善・事業再生のご相談</option>
+          <option value="ai">AI研修・開発・講演のご依頼</option>
+          <option value="other">その他</option>
+        </select>
+      </label>
+      <label>会社名<input type="text"></label>
+      <label>お名前<small>必須</small><input type="text" required></label>
+      <label>メールアドレス<small>必須</small><input type="email" required></label>
+      <label>電話番号<input type="tel"></label>
+      <label>お問い合わせ内容<small>必須</small><textarea required></textarea></label>
+      <button class="btn">送信する →</button>
+    </form>
+  </div>
+</section>
+
+<script src="assets/common.js?v=6"></script>
+<script>
+  var t = new URLSearchParams(location.search).get('type');
+  if (t) document.getElementById('type').value = t;
+</script>
+</body>
+</html>
