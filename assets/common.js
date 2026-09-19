@@ -12,7 +12,7 @@
     '<nav class="nav">' +
     '<a href="' + root + 'index.html#story">私たちについて</a>' +
     '<a href="' + root + 'index.html#business">事業内容</a>' +
-    '<a href="' + root + 'housing/index.html">住宅支援事業</a>' +
+    '<a href="' + root + 'housing/index.html">不動産事業</a>' +
     '<a href="' + root + 'news/index.html">お知らせ</a>' +
     '<a href="' + root + 'company.html">会社概要</a>' +
     '<a class="cta" href="' + root + 'contact.html">お問い合わせ</a>' +
@@ -24,10 +24,10 @@
     '<p>合同会社クリエイトグラウンド<br>〒153-0064 東京都目黒区下目黒1-1-14 コノトラビル7F</p>' +
     '<p class="tel">TEL <a href="tel:0345639965">03-4563-9965</a>　FAX 03-6630-2527</p></div>' +
     '<div><h5>BUSINESS</h5><ul>' +
+    '<li><a href="' + root + 'housing/index.html">不動産事業（法人社宅）</a></li>' +
     '<li><a href="' + root + 'business/consulting.html">経営改善・事業再生</a></li>' +
-    '<li><a href="' + root + 'business/ai.html">AI・研修・出版</a></li>' +
-    '<li><a href="' + root + 'housing/index.html">住宅支援事業</a></li></ul></div>' +
-    '<div><h5>HOUSING</h5><ul>' +
+    '<li><a href="' + root + 'business/ai.html">AI・研修・出版</a></li></ul></div>' +
+    '<div><h5>REAL ESTATE</h5><ul>' +
     '<li><a href="' + root + 'housing/service.html">サービス</a></li>' +
     '<li><a href="' + root + 'housing/partners.html">オーナー・管理会社様へ</a></li>' +
     '<li><a href="' + root + 'housing/residents.html">住まいをお探しの方へ</a></li></ul></div>' +
@@ -49,7 +49,7 @@
       ['residents', 'residents.html', '住まいをお探しの方へ'],
       ['company', 'company.html', '事業者情報']
     ];
-    var html = '<div class="subnav"><div class="wrap"><b>HOUSING</b>' +
+    var html = '<div class="subnav"><div class="wrap"><b>不動産事業</b>' +
       items.map(function (i) {
         return '<a class="' + (i[0] === sub ? 'on' : '') + '" href="' + root + 'housing/' + i[1] + '">' + i[2] + '</a>';
       }).join('') + '</div></div>';
