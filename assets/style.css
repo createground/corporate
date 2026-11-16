@@ -352,3 +352,35 @@ form button.btn{border:0;cursor:pointer;font:inherit;font-weight:700;justify-sel
 .spec dt{float:left;clear:left;width:76px;color:var(--ink-2)}
 .spec dd{margin-left:76px;margin-bottom:6px}
 @media (max-width:960px){.bookpost{grid-template-columns:1fr;gap:24px}.bookpost img{max-width:200px}}
+
+/* ---------- use case: 24h chat window (AI page) ---------- */
+.usecase .uc-head{margin-bottom:48px}
+.uc-label{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.uc-label span{margin-left:1em}
+.uc-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:72px;align-items:center}
+.uc-browser{background:#f4efe6;border:1.5px solid #1e2733;border-radius:12px;overflow:hidden;box-shadow:0 24px 50px rgba(20,24,32,.10)}
+.uc-bar{background:#1e2733;display:flex;align-items:center;gap:7px;padding:12px 14px}
+.uc-bar i{width:9px;height:9px;border-radius:50%;background:#e8833f}
+.uc-bar i:nth-child(3){background:#c8cdd4}
+.uc-bar span{flex:1;margin-left:8px;background:#fff;border-radius:99px;font-size:13px;padding:3px 14px;color:var(--ink);line-height:1.7}
+.uc-page{padding:26px 26px 30px}
+.uc-shop{font-size:21px;font-weight:900;letter-spacing:.02em}
+.uc-lead{font-size:13.5px;color:var(--ink-2);margin:6px 0 18px}
+.uc-chat{background:#ebe4d8;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.uc-q{align-self:flex-end;background:#e07a3c;color:#fff;font-weight:700;font-size:14.5px;padding:8px 18px;border-radius:10px}
+.uc-a{align-self:flex-start;background:#fff;border:1px solid #d6cfc2;font-size:14px;line-height:1.75;padding:12px 18px;border-radius:10px}
+.uc-browser.in .uc-q{animation:ucPop .5s .6s both}
+.uc-browser.in .uc-a{animation:ucPop .5s 1.5s both}
+@keyframes ucPop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.uc-steps{list-style:none;counter-reset:uc;display:flex;flex-direction:column;gap:30px}
+.uc-steps li{counter-increment:uc;display:grid;grid-template-columns:44px 1fr;row-gap:2px}
+.uc-steps li::before{content:counter(uc);grid-row:span 2;font-family:"Inter";font-weight:700;font-size:22px;color:var(--accent);line-height:1.4}
+.uc-steps b{font-size:18px;font-weight:700;line-height:1.5}
+.uc-steps span{font-size:13.5px;color:var(--ink-2)}
+.uc-foot{margin-top:72px;padding-top:26px;border-top:1.5px solid var(--accent);color:var(--accent);font-size:clamp(19px,2vw,24px);font-weight:900;letter-spacing:.06em}
+@media (max-width:960px){
+  .uc-body{grid-template-columns:1fr;gap:44px}
+  .uc-page{padding:20px 18px 22px}
+  .uc-foot{margin-top:52px;font-size:16px;letter-spacing:.03em}
+}
+@media (prefers-reduced-motion:reduce){.uc-browser.in .uc-q,.uc-browser.in .uc-a{animation:none}}
