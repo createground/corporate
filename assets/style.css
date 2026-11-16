@@ -378,6 +378,8 @@ form button.btn{border:0;cursor:pointer;font:inherit;font-weight:700;justify-sel
 .uc-steps b{font-size:18px;font-weight:700;line-height:1.5}
 .uc-steps span{font-size:13.5px;color:var(--ink-2)}
 .uc-foot{margin-top:72px;padding-top:26px;border-top:1.5px solid var(--accent);color:var(--accent);font-size:clamp(19px,2vw,24px);font-weight:900;letter-spacing:.06em}
+.uc-try{margin-top:14px;font-size:14px;color:var(--ink-2)}
+.uc-try::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:10px;vertical-align:middle}
 @media (max-width:960px){
   .uc-body{grid-template-columns:1fr;gap:44px}
   .uc-page{padding:20px 18px 22px}

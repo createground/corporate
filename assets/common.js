@@ -92,3 +92,20 @@
   // 保険：何かの理由で発火しなくても、少し待てば必ず表示する
   setTimeout(function () { document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); }); }, 2500);
 })();
+
+// AIチャット窓口（Difyで作成・右下の吹き出し）
+(function () {
+  var TOKEN = 'aYoohbsfbxMcSvfv';
+  window.difyChatbotConfig = { token: TOKEN, baseUrl: 'https://udify.app' };
+  var st = document.createElement('style');
+  st.textContent =
+    '#dify-chatbot-bubble-button{background-color:#c2502a!important;box-shadow:0 8px 24px rgba(194,80,42,.35)!important}' +
+    '#dify-chatbot-bubble-window{position:fixed!important;top:auto!important;bottom:84px!important;right:16px!important;width:24rem!important;height:40rem!important;max-height:calc(100vh - 120px)!important;box-shadow:0 20px 50px rgba(16,19,25,.25)!important}' +
+    '@media (max-width:640px){#dify-chatbot-bubble-window{width:calc(100vw - 32px)!important;right:16px!important}}';
+  document.head.appendChild(st);
+  var s = document.createElement('script');
+  s.src = 'https://udify.app/embed.min.js';
+  s.id = TOKEN;
+  s.defer = true;
+  document.body.appendChild(s);
+})();
